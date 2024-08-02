@@ -1,0 +1,152 @@
+.header-menu{
+  width: 100%;
+  position: fixed;z-index: 1000;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  @include tablet{
+    position: relative;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+/* Menu styles */
+.banner-menu {
+  position: absolute;
+  top: 78px;/* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 2;
+  transition: ease-in-out .3s all;
+  @include mobile{
+    overflow: hidden;
+    max-height: 0px;
+  }
+  &.active{
+    max-height: 100rem;
+    transition: ease-in-out .3s all;
+
+  }
+  @include mobile{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: wrap;
+    background: white;
+    width: 100%;
+    right: 0px;
+  }
+  @include tablet{
+    top: 10px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: wrap;
+
+    @include desktop{
+      flex-flow: row;
+    }
+    li {
+      margin: 0 10px;
+      @include mobile{
+        width: 100%;
+        border-bottom: 1px solid #dedfe7;
+      }
+      a {
+        color: $gray;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 24px;
+        display: block;
+        @include tablet{
+          color: white;
+          padding: 0;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+ 
+
+
+
+
+
+
+
+
+  .container{
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  background: white;
+  @include tablet{
+    background: transparent;
+  }
+  &__brand{
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+    
+    @include mobile{
+      justify-content: space-between;
+      img{
+        width: 50px;
+        height: auto;
+        display: block;
+      }
+    }
+  @include tablet{
+    /* Top right image styles */
+.banner-logo {
+  position: absolute;
+  top: 5%; /* Adjust as needed */
+  left: 5%; /* Adjust as needed */
+  width: 10em; /* Adjust as needed */
+  height: 15em;
+  z-index: 2;
+}
+
+  }
+  }
+  .sandwich{
+    display: block;
+    @include tablet{
+      display: none;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      z-index: 1000;
+    }
+    &__line{
+      width: 30px;
+      height: 2px;
+      background: $purple;
+      margin: 6px 0;
+      transition: ease-in-out .3s all;
+
+    }
+    &.active{
+      .sandwich__line{
+        &:nth-child(1){
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+
+  }
+}

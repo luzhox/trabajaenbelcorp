@@ -1,0 +1,72 @@
+.description{
+  margin-top: 0px;
+  position: relative;
+  .container{
+    display: flex;
+    flex-flow: wrap;
+  }
+  &__img{
+    max-width: 210px;
+    margin-right: 32px;
+    img{
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__text{
+    max-width: 780px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    h3{
+      font-size: 28px;
+      width: 100%;
+      display: block;
+      color: $purple;
+      @include tablet{
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+    &__item{
+      width: 100%;
+      @include tablet{
+        width: calc(100% / 2 - 24px);
+        margin-right: 24px;
+      }
+      &:last-child{
+        margin-right: 0px;
+      }
+      ul{
+        list-style-position: outside;
+        padding-left: 12px;
+        font-size: 18px;
+        color: $gray;
+      }
+      p{
+        margin-bottom: 16px;
+        margin-top: 0px;
+        font-size: 18px;
+        color: $gray;
+
+      }
+    }
+  }
+  &__imgtwo{
+    max-width: 300px;
+    position: absolute;
+    bottom: -64px;
+    right: 0px;
+    display: none;
+    @include desktop{
+      display: block;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}

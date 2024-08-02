@@ -1,0 +1,38 @@
+.cifras {
+  text-align: left;
+  margin-bottom: 4em;
+  color: gray;
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+}
+.cifras sup {
+  font-size: 0.6em;
+}
+
+
+.growing-number {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: $purple;
+}
+
+@media (max-width: 768px) {
+  .cifras-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cifras-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+.small-letter {
+  font-size: small;
+}

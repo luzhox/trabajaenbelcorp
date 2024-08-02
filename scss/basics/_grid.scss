@@ -1,0 +1,99 @@
+*{
+  color: gray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;outline: 0
+}
+/// get column width on percent
+@function col($columns, $total) {
+  @return calc((100% / $total) * $columns);
+}
+
+$breakpoint-tablet: 744px;
+$breakpoint-desktop: 1240px;
+
+/// Show only on desktop screens
+@mixin desktop {
+  @media only screen and (min-width: $breakpoint-desktop) {
+      @content;
+  }
+}
+
+/// Show on tablet screens
+@mixin tablet {
+  @media only screen and (min-width: ($breakpoint-tablet + 1)) {
+      @content;
+  }
+}
+
+/// Show only on mobile screens
+@mixin mobile {
+  @media only screen and (max-width: $breakpoint-tablet) {
+      @content;
+  }
+}
+h3{
+  font-size: 24px;
+  width: 100%;
+  display: block;
+  color: $purple;
+  @include tablet{
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+.main-right{
+  @include mobile{
+    display: none;
+  }
+}
+.main-left{
+  @include mobile{
+    display: none;
+  }
+}
+.small-letter{
+  @include tablet{
+    margin-top: 24px;
+  }
+}
+.main-title{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    font-size: 2em;
+   
+    @include tablet{
+      font-size: 2.7em;
+      margin-bottom: 32px;
+ 
+    }
+}
+.main-content{
+  h3{
+    margin: 16px 0px;
+  }
+}
+.container {
+  max-width: 480px;
+  width: 84%;
+  margin: 0 auto;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: initial;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  @include tablet {
+      max-width: 750px;
+      width: 100%;
+  }
+
+  @include desktop {
+    padding-top: 64px;
+    padding-bottom: 64px;
+      max-width: 1184px;
+      box-sizing: border-box;
+  }
+}

@@ -1,0 +1,38 @@
+
+.practicas {
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+}
+
+.practicas .button-apply {
+  border: none;
+  border-radius: 0.6em;
+  background-color: #a387b9; /* You can change this to any color you prefer */
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 24px;
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  h4{
+    color: white;
+  }
+}
+
+.practicas .button-apply:hover {
+  background-color: #67398d;
+}
+
+.button-apply h3 {
+  text-align: center;
+  padding: 0;
+}

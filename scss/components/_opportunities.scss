@@ -1,0 +1,77 @@
+.opportunities{
+  color: $gray;
+  &-left{
+    display: flex;
+  justify-content: center;
+  margin: 0  auto;
+  img{
+    max-width: 70%;
+    min-height: auto;
+  }
+  }
+  .container{
+    @include desktop{
+      max-width: 1082px;
+    }
+  }
+}
+
+
+
+.center-countries {
+  text-align: center;
+  width:100%;
+}
+
+.center-countries h3 {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.countries {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1em; /* Adjust based on your button height and gap */
+  max-width: 100%;
+
+  @include tablet{
+    margin-left: 48px;
+  }
+}
+
+.image-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f3f6;
+  width: 100%;
+
+  @include tablet{
+    max-width: 300px;
+  }
+
+}
+
+.image-button img {
+  height: 2em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: auto;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+.image-button span {
+  align-items: center;
+  font-size: 1.1em;
+  color: $gray;
+}
+
+.image-button:hover span {
+  color: rgb(95, 13, 150);
+  font-weight: bold;
+}

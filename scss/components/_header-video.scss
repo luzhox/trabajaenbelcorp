@@ -3,6 +3,10 @@
   height: 60%; /* Adjust the height as needed, e.g., 50vh for half viewport height */
   width: 100%;
   overflow: hidden;
+  margin-top: 90px;
+  @include tablet{
+    margin-top: 0px;
+  }
   &__video {
     position: absolute;
     top: 50%;

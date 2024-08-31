@@ -11,7 +11,7 @@
   }
   .container{
     @include desktop{
-      max-width: 1082px;
+      max-width: 95%;
     }
   }
 }
@@ -24,8 +24,18 @@
 }
 
 .center-countries h3 {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
+  text-align: left;
+  font-size: 16px;
+  color: $gray;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  @include tablet{
+    font-size: 12px;
+    text-align: left;
+  }
 }
 
 .countries {
@@ -36,6 +46,9 @@
 
   @include tablet{
     margin-left: 48px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -51,24 +64,30 @@
   width: 100%;
 
   @include tablet{
-    max-width: 300px;
+    max-width: 240px;
   }
 
 }
 
 .image-button img {
-  height: 2em;
+  height: 1.5em;
   margin-right: 5px;
   margin-bottom: 5px;
   width: auto;
   white-space: nowrap;
   padding: 0 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .image-button span {
   align-items: center;
-  font-size: 1.1em;
+  font-size: 14px;
   color: $gray;
+  font-weight: 300;
+  @include tablet{
+    font-size: 0.8em;
+  }
 }
 
 .image-button:hover span {

@@ -64,6 +64,7 @@
         @include tablet{
           color: white;
           padding: 0;
+          font-size: 0.6em;
         }
         &:hover {
           text-decoration: underline;
@@ -85,6 +86,9 @@
   .container{
     padding-top: 24px;
     padding-bottom: 24px;
+    @include tablet{
+      max-width: 100%;
+    }
   }
   background: white;
   @include tablet{
@@ -110,9 +114,9 @@
   position: absolute;
   top: 5%; /* Adjust as needed */
   left: 5%; /* Adjust as needed */
-  width: 10em; /* Adjust as needed */
-  height: 15em;
   z-index: 2;
+  width: 128px;
+  height: auto;
 }
 
   }

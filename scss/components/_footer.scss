@@ -1,14 +1,13 @@
 .footer {
   background-color: #f8fafb;
   text-align: center;
-  padding-top: 3em;
   img{
 
     height: auto;
     display: block;
     margin-bottom: 24px;
     object-fit: cover;
-    max-width: 150px;
+    max-width: 120px;
     @include mobile{
       width: 40%;
     }
@@ -23,6 +22,9 @@
   padding-bottom: 2em;
   @include tablet{
     flex-flow: row;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -45,7 +47,7 @@
   }
   @include tablet{
     border: 0px;
-    margin: 0 1.5em;
+    margin: 0 1em;
   }
 }
 
@@ -60,11 +62,25 @@
 
 .footer-column ul li {
   margin-bottom: 0.8em;
+  font-size: 10px;
+  font-family: 'Museo Sans',sans-serif;
+  color: $gray;
 }
 
 .footer-column ul li a {
   text-decoration: none;
   color: inherit;
+}
+.footer-column{
+  &.marcas{
+    min-width: 102px;
+  }
+&.legal{
+  min-width: 180px;
+}
+&.social-media{
+  min-width: 120px;
+}
 }
 
 .footer-column ul li a:hover {

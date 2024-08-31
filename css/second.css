@@ -1,8 +1,23 @@
 /* styles.css */
 @font-face {
     font-family: 'Museo Sans';
-    src: url('../resources/fonts/museosans-500/Fonts/MuseoSans_500.otf') format('opentype');
-    font-weight: normal;
+    src: url('../resources/fonts/MuseoSans/Museo Sans 300.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../resources/fonts/MuseoSans/Museo Sans 500.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../resources/fonts/MuseoSans/Museo Sans 700.otf') format('opentype');
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -105,11 +120,18 @@ li::marker {
 .main-content {
     min-width: 50%;
     display: flex;
-    flex-direction: row;
     color: #4e5466;
     margin-bottom: 2em;
     flex-flow: wrap;
     
+}
+.main-title{
+    font-size: 22px;
+    text-align: left;
+    color: #4e5466;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .spacing{
     margin: 1rem 0px;
@@ -140,7 +162,7 @@ li::marker {
     }
     .main-middle {
         width: 40%;
-        text-align: left;
+        text-align: left;  
     }
 }
 

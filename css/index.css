@@ -1,10 +1,26 @@
 /* styles.css */
 @font-face {
     font-family: 'Museo Sans';
-    src: url('../resources/fonts/museosans-500/Fonts/MuseoSans_500.otf') format('opentype');
-    font-weight: normal;
+    src: url('../resources/fonts/MuseoSans/Museo Sans 300.otf') format('opentype');
+    font-weight: 300;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../resources/fonts/MuseoSans/Museo Sans 500.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../resources/fonts/MuseoSans/Museo Sans 700.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 * {
     font-family: 'Museo Sans', sans-serif;

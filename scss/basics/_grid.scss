@@ -57,23 +57,64 @@ h3{
     margin-top: 24px;
   }
 }
+.c2 img{
+  @include tablet{
+    width: 310px;
+    max-width: 310px;
+  }
+}
+.main-left-second{
+  max-width: 430px;
+  margin-top: 80px;
+  img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
 .main-title{
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: gray;
+    font-family: 'Museo Sans',sans-serif;
     font-size: 2em;
-   
+    font-weight: 500;
+   max-width: 900px;
+   color:#4e5466;
     @include tablet{
-      font-size: 2.7em;
+      font-size: 36px;
       margin-bottom: 32px;
  
     }
 }
+.spacing{
+  margin: 44px 0px;
+}
+
 .main-content{
   h3{
     margin: 16px 0px;
+    font-size: 16px;
+    color: $gray;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 12px;
+    line-height: 120%;
+    color: $gray;
+    font-weight: 300;
+    margin-top: 12px;
+  }
+  ul{
+    padding-left: 12px;
+    li{
+      color: $gray;
+      font-family: 'Museo Sans',sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      margin-bottom: 4px;
+      ul{
+        margin-top: 12px;
+      }
+    }
   }
 }
 .container {
@@ -93,7 +134,23 @@ h3{
   @include desktop {
     padding-top: 64px;
     padding-bottom: 64px;
-      max-width: 1184px;
+      max-width: 85%;
       box-sizing: border-box;
+  }
+}
+span.subtext{
+  font-size: 10px;
+  margin-bottom: 12px;
+  line-height: 120%;
+  color: $gray;
+  font-weight: 300;
+}
+.footer-message{
+  span{
+    font-size: 12px;
+    margin-bottom: 12px;
+    line-height: 120%;
+    color: $gray;
+    font-weight: 300;
   }
 }

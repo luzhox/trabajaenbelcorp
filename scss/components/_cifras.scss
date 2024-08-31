@@ -1,29 +1,60 @@
 .cifras {
   text-align: left;
-  margin-bottom: 4em;
   color: gray;
+  h3{
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $gray;
+    font-size: 16px;
+    @include tablet{
+      font-size: 14px;
+
+    }
+  }
   &-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 2em;
     margin-bottom: 3em;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cifra{
+  margin-bottom: 24px;
+    p{
+      font-size: 14px;
+      line-height: 120%;
+      margin-top: 8px;
+      @include tablet{
+        font-size: 10px;
+      }
+    }
+  .growing-number {
+    font-size:44px;
+    line-height: 120%;
+
+    font-weight: bold;
+    color: $gray;
+    letter-spacing: normal;
+  }
   }
 }
 .cifras sup {
   font-size: 0.6em;
+
 }
 
 
-.growing-number {
-  font-size: 3.5em;
-  font-weight: bold;
-  color: $purple;
-}
+
+
 
 @media (max-width: 768px) {
   .cifras-container {
       grid-template-columns: repeat(2, 1fr);
+    
   }
 }
 
@@ -35,4 +66,9 @@
 
 .small-letter {
   font-size: small;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -40px;
 }

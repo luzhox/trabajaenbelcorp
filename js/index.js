@@ -1,7 +1,5 @@
-function formatNumber(num, isFormated, surpass) {
+function formatNumber(num, isFormated, surpass, formatScale) {
     if (isFormated == null || !isFormated) { return num; }
-
-    let formatScale = 1000;
     let finalNum = Math.floor(num/formatScale);
 
     return `${surpass ? '+' : ''}${finalNum}K`;
@@ -15,19 +13,14 @@ function animateNumbers(className, duration) {
         let start = 0;
         let increment = Math.ceil(finalNumber / 100); // Adjust this divisor to control speed
         let stepTime = duration / (finalNumber / increment);
+        const isFormated = element.getAttribute('formated');
+        const surpass = element.getAttribute('surpass');
         
         let timer = setInterval(function() {
             start += increment;
-            if (start > finalNumber) {
-                start = finalNumber;
-            }
-            element.innerHTML = start;
-            if (start == finalNumber) {
-                clearInterval(timer);
-                let isFormated = element.getAttribute('formated');
-                let surpass = element.getAttribute('surpass');
-                element.innerHTML = formatNumber(start, isFormated, surpass);
-            }
+            element.innerHTML = formatNumber(start >= finalNumber ? finalNumber: start, isFormated, surpass, 1);
+
+            if (start >= finalNumber) { clearInterval(timer); }
         }, stepTime);
     }
 }
@@ -35,7 +28,7 @@ function animateNumbers(className, duration) {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            animateNumbers('number', 2000);
+            animateNumbers('growing-number', 2000);
             observer.unobserve(entry.target);
         }
     });
@@ -62,8 +55,8 @@ buttons.forEach(button => {
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById("vanishing-text");
     const textArray = [
-        "Desafiate y crece",
-        "Talento Belcorp"
+        "Desafíate y crece",
+        "Logra tu mejor versión"
     ];
     let currentIndex = 0;
 
@@ -71,12 +64,31 @@ document.addEventListener("DOMContentLoaded", function() {
         currentIndex = (currentIndex + 1) % textArray.length;
         textElement.textContent = textArray[currentIndex];
     }); // 6s (animation duration) / 2 = 3s
-    const sandwich = document.getElementsByClassName('sandwich')[0];
-    const nav = document.getElementsByClassName('banner-menu')[0];
-    sandwich.addEventListener('click', (e) => {
-        nav.classList.toggle('active');
-        sandwich.classList.toggle('active');
-    });
-
 });
 
+
+function btnRedirect(event, text = '') {
+    let search = text;
+    if (!text && event?.target) {
+        const btn = event.target;
+        search = btn.innerText
+            .replace(/(\r\n|\n|\r)/gm, " ") // Reemplaza saltos de línea con espacio
+            .replace(" & ", " AND ")        // Reemplaza " & " con " AND "
+            .replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ ]/g, " ") // Reemplaza caracteres no alfabéticos con espacio
+            .replace(/\s\s+/g, " ");        // Reemplaza múltiples espacios con uno solo
+    }
+    window.open("https://ats.rankmi.com/tenants/771/organizations/belcorp-connect?tags=" + search);
+}
+
+document.querySelectorAll('#vacantes-equipo button , #vacantes-pais button span').forEach((button) => {
+    button.addEventListener('click', btnRedirect);
+});
+
+document.querySelector('#practicas .button-apply').addEventListener('click', () => btnRedirect(undefined, "Practicas"));
+
+const sandwich = document.getElementsByClassName('sandwich')[0];
+const nav = document.getElementsByClassName('banner-menu')[0];
+sandwich.addEventListener('click', (e) => {
+    nav.classList.toggle('active');
+    sandwich.classList.toggle('active');
+});

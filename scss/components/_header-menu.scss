@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   z-index: 9999999;
-  @include tablet{
+  @include desktop{
     position: relative;
     top: 0;
     left: 0;
@@ -17,7 +17,7 @@
   right: 20px; /* Adjust as needed */
   z-index: 2;
   transition: ease-in-out .3s all;
-  @include mobile{
+  @media only screen and (max-width: 1200px){
     overflow: hidden;
     max-height: 0px;
   }
@@ -26,7 +26,7 @@
     transition: ease-in-out .3s all;
 
   }
-  @include mobile{
+  @media only screen and (max-width: 1200px){
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -36,7 +36,7 @@
     width: 100%;
     right: 0px;
   }
-  @include tablet{
+  @include desktop{
     top: 10px;
   }
   ul {
@@ -51,7 +51,7 @@
     }
     li {
       margin: 0 10px;
-      @include mobile{
+      @media only screen and (max-width: 1200px){
         width: 100%;
         border-bottom: 1px solid #dedfe7;
       }
@@ -61,7 +61,7 @@
         font-weight: bold;
         padding: 24px;
         display: block;
-        @include tablet{
+        @include desktop{
           color: white;
           padding: 0;
           font-size: 0.6em;
@@ -86,12 +86,12 @@
   .container{
     padding-top: 24px;
     padding-bottom: 24px;
-    @include tablet{
+    @include desktop{
       max-width: 100%;
     }
   }
   background: white;
-  @include tablet{
+  @include desktop{
     background: transparent;
   }
   &__brand{
@@ -100,7 +100,7 @@
     flex-flow: wrap;
     position: relative;
     
-    @include mobile{
+    @media only screen and (max-width: 1200px){
       justify-content: space-between;
       img{
         width: 50px;
@@ -108,7 +108,7 @@
         display: block;
       }
     }
-  @include tablet{
+  @include desktop{
     /* Top right image styles */
 .banner-logo {
   position: absolute;
@@ -123,7 +123,7 @@
   }
   .sandwich{
     display: block;
-    @include tablet{
+    @include desktop{
       display: none;
       position: absolute;
       top: 1em;

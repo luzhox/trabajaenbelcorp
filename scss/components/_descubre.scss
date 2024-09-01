@@ -6,7 +6,7 @@
     top: 55px;
     left: 0;
     display: none;
-    @include tablet{
+    @include desktop{
       display: block;
     }
   }
@@ -55,12 +55,15 @@
     max-width: 100%;
     position: relative;
     overflow: hidden;
-    min-width: 200px;
+    min-width: 180px;
     margin-right: 16px;
     scroll-snap-align: center;
     @include tablet{
       max-width: calc(100% / 3 - 16px);
       margin-top: 12px;
+    }
+    @include desktop{
+      min-width: 200px;
     }
     &-button {
       background: none;

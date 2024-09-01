@@ -20,7 +20,7 @@
   flex-flow: wrap;
   font-size: 0.8em;
   padding-bottom: 2em;
-  @include tablet{
+  @include desktop{
     flex-flow: row;
     max-width: 780px;
     margin-left: auto;
@@ -32,22 +32,30 @@
   max-width: fit-content;
   margin-bottom: 10px;
   border-bottom: none;
-
+  width: 100%;
+  @include desktop{
+    width: auto;
+  }
 }
 
 .footer-column {
 
   color: $gray;
   width: 100%;
-  max-width: 300px;
   margin-bottom: 24px;
   border-bottom: 1px solid lightgray;
+ 
   &:last-child{
     border-bottom: none;
   }
   @include tablet{
+ 
+  }
+  @include desktop{
     border: 0px;
     margin: 0 1em;
+
+    max-width: 300px;
   }
 }
 

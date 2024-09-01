@@ -3,6 +3,13 @@
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: #f8fafb;
+  .container{
+    max-width: 96%;
+    width: 100%;
+    @include tablet{
+      max-width: 95%;
+    }
+  }
   h3{
     text-align: center;
     width: 100%;
@@ -14,13 +21,7 @@
 
     }
   }
-.container{
-  max-width: 96%;
-  width: 100%;
-  @include tablet{
-    max-width: 95%;
-  }
-}
+
 
 &__container {
   display: flex;
